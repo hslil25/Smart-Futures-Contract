@@ -1,0 +1,291 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "signer",
+						"type": "address"
+					}
+				],
+				"name": "ContractSigned",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "product",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "dueDate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Issued",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "mc_id",
+						"type": "uint256"
+					}
+				],
+				"name": "MarginCallDone",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "marginSigner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "margin",
+						"type": "uint256"
+					}
+				],
+				"name": "Offered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "offID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "contractID",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptOffer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "contracts",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "product",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "issuer",
+						"type": "address"
+					},
+					{
+						"internalType": "address payable",
+						"name": "signer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dueDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "marginIssuer",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "marginSigner",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_product",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_dueDate",
+						"type": "uint256"
+					}
+				],
+				"name": "createContract",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "contractID",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "giveOffer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "contractID",
+						"type": "uint256"
+					}
+				],
+				"name": "margin_Call",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "contractID",
+						"type": "uint256"
+					}
+				],
+				"name": "margincallRequestorAccept",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"forward.sol": "Forward"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"forward.sol": {
+			"keccak256": "0x6f615790bb7822117121368abe2b9ed2db1e07f2d2949c33a741285ef7c185d3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f2848c63049cd52b9cde50fb5ee92f2feb3afe5def882e77c4e18c14e0c8062b",
+				"dweb:/ipfs/QmU14v3fTmCsXbyyRfrNuhwA4xopJEbDvWhWsg5uhSj9jf"
+			]
+		}
+	},
+	"version": 1
+}
